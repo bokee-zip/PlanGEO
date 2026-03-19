@@ -1,0 +1,108 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+@import "tailwindcss";
+
+@theme {
+  --color-apple-blue: #3C76F1;
+  --color-apple-blue-dark: #3C76F1;
+  --color-apple-text: #191919;
+  --color-apple-text-light: #F5F8FA;
+  --color-apple-text-gray: #969696;
+  --color-apple-bg: #ffffff;
+  --color-apple-bg-gray: #F5F8FA;
+  --color-apple-bg-dark: #191919;
+  --color-apple-bg-dark-gray: #082253;
+}
+
+@layer base {
+  body {
+    font-family: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #191919;
+    @apply antialiased overflow-x-hidden;
+    background-color: #F5F8FA;
+    letter-spacing: -0.015em;
+  }
+}
+
+@layer components {
+  /* Apple Typography Scale */
+  .h1-hero {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-[-0.03em] leading-[1.15];
+  }
+  
+  .h1-display {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold tracking-[-0.03em] leading-[1.15];
+  }
+
+  .h2-header {
+    @apply text-xl md:text-2xl lg:text-3xl font-semibold tracking-[-0.02em] leading-[1.2] mb-4;
+  }
+
+  .h3-subhead {
+    @apply text-lg md:text-xl font-semibold tracking-[-0.015em] leading-[1.2];
+  }
+
+  .body-main {
+    @apply text-base lg:text-[1.3rem] font-medium leading-[1.6] tracking-[-0.01em];
+  }
+  .body-main strong {
+    @apply font-semibold text-[#191919];
+  }
+
+  /* Text Gradients (Apple Style Glow) */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#3C76F1] via-[#b651ff] to-[#FF4040];
+  }
+  
+  .text-gradient-subtle {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#969696] to-[#191919];
+  }
+
+  /* Eyebrow Label */
+  .label-caps {
+    @apply text-[11px] md:text-sm font-semibold tracking-[0.05em] uppercase text-[#969696] mb-4 block;
+  }
+
+  /* Apple Style Cards */
+  .clean-card {
+    @apply bg-[#ffffff] rounded-[2rem] transition-transform duration-500 overflow-hidden border border-[#E1E1E1]/50;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  }
+  .clean-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  .dark-card {
+    @apply bg-[#082253] rounded-[2rem] transition-transform duration-500 overflow-hidden;
+  }
+  .dark-card:hover {
+    transform: scale(1.01);
+  }
+
+  .glass-card {
+    @apply bg-[#ffffff]/80 backdrop-blur-3xl border border-[#ffffff]/50 rounded-[2rem];
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  }
+
+  .soft-gradient-bg {
+    background: #F5F8FA;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #E1E1E1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #969696;
+}
