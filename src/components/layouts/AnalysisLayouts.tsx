@@ -11,8 +11,8 @@ export const CitationMatrixLayout = ({ slide }: { slide: Slide }) => {
     { model: 'Perplexity', q1: 29, q2: 0, q3: 0, q4: 57, q5: 0, total: 17 },
   ];
   const ratioData = [
-    { type: '외부 기사/매거진', ratio: '~45%', url: 'magazine.hankyung.com 등', desc: 'PR 기사에서 원핸드그립·슬림 키워드 인용', highlight: true },
-    { type: '블루벤트 공식몰', ratio: '~15%', url: 'bluevent.co.kr', desc: '제품 목록만 인용, 상세 스펙 텍스트 없음', highlight: false },
+    { type: '외부 기사/매거진', ratio: '~45%', url: 'magazine.*****.com 등', desc: 'PR 기사에서 원핸드그립·슬림 키워드 인용', highlight: true },
+    { type: 'A사 공식몰', ratio: '~15%', url: '*****.co.kr', desc: '제품 목록만 인용, 상세 스펙 텍스트 없음', highlight: false },
     { type: '유튜브/블로그', ratio: '~10%', url: 'youtube, blog.naver 등', desc: '다나와 리뷰에서 일부 스펙 추출', highlight: false },
     { type: '쇼핑몰', ratio: '~5%', url: '이마트/쿠팡', desc: 'ChatGPT에서 간헐적 인용(가격 위주)', highlight: false },
   ];
@@ -28,15 +28,6 @@ export const CitationMatrixLayout = ({ slide }: { slide: Slide }) => {
           <h2 className="text-2xl md:text-3xl font-bold tracking-[-0.03em] text-[#191919] mb-6" dangerouslySetInnerHTML={{ __html: slide.title }} />
           <p className="text-lg lg:text-xl text-[#969696] font-medium leading-tight tracking-tight" dangerouslySetInnerHTML={{ __html: slide.oneLiner }} />
         </div>
-        <a 
-          href="https://docs.google.com/spreadsheets/d/1Ju3IWJyseUY3eX2f3n2ZxQcn0rNLFBkd2itZp7uIVP0/edit?usp=sharing" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-white border border-[#E1E1E1] hover:border-[#3C76F1] hover:text-[#3C76F1] px-6 py-3 rounded-xl font-bold text-sm tracking-tight transition-all shadow-sm group shrink-0 mb-1"
-        >
-          실제 답변 데이터(Raw) 보기
-          <ExternalLink size={18} className="text-[#969696] group-hover:text-[#3C76F1] transition-colors" />
-        </a>
       </div>
       
       <div className="rounded-2xl border border-[#E1E1E1] bg-white shadow-lg overflow-hidden mb-6">
@@ -129,7 +120,7 @@ export const CitationMatrixLayout = ({ slide }: { slide: Slide }) => {
         <div className="relative z-10 space-y-8">
           <span className="label-caps !text-[#3C76F1]">Key Findings</span>
           <h3 className="text-xl lg:text-2xl font-bold tracking-[-0.02em] text-[#082253]">
-            주요 AI 모델 대상 블루벤트 인용 현황 점검에 따른 <span className="text-[#3C76F1]">주요 발견 사항</span>
+            주요 AI 모델 대상 A사 인용 현황 점검에 따른 <span className="text-[#3C76F1]">주요 발견 사항</span>
           </h3>
           <div className="w-full h-[1px] bg-[#3C76F1]/20" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
@@ -137,7 +128,7 @@ export const CitationMatrixLayout = ({ slide }: { slide: Slide }) => {
               <div className="text-[#3C76F1] shrink-0 mt-1">
                 <CheckCircle2 size={20} strokeWidth={2} />
               </div>
-              <p className="text-[15px] text-[#4B4B4B] font-medium leading-relaxed tracking-tight" dangerouslySetInnerHTML={{ __html: "Q2(추천)·Q3(비교): 4개 모델 모두 블루벤트 미인용 &rarr; <strong class='text-[#3C76F1]'>경쟁사만 노출</strong>" }} />
+              <p className="text-[15px] text-[#4B4B4B] font-medium leading-relaxed tracking-tight" dangerouslySetInnerHTML={{ __html: "Q2(추천)·Q3(비교): 4개 모델 모두 A사 미인용 &rarr; <strong class='text-[#3C76F1]'>경쟁사만 노출</strong>" }} />
             </div>
             <div className="flex gap-4 items-start">
               <div className="text-[#3C76F1] shrink-0 mt-1">
@@ -169,30 +160,30 @@ export const CompetitorStatusLayout = ({ slide }: { slide: Slide }) => {
       <div className="bg-[#ECF1FE] p-10 flex flex-col gap-6 rounded-[2rem] border border-[#3C76F1]/20 shadow-sm relative overflow-hidden mb-12">
          <div className="relative z-10 flex flex-col gap-5">
            <p className="text-[17px] text-[#4B4B4B] font-medium leading-relaxed tracking-tight">
-             Q2(추천)와 Q3(비교) 질문에서 4개 모델 모두 블루벤트 미언급.<br/>
+             Q2(추천)와 Q3(비교) 질문에서 4개 모델 모두 A사 미언급.<br/>
              대신 아래 경쟁사가 반복적으로 노출됨:
            </p>
            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
              <div className="bg-white p-5 rounded-xl border border-[#E1E1E1]/50 shadow-sm">
                <div className="text-[#3C76F1] font-bold text-sm tracking-widest mb-2 font-mono">TYPE 1</div>
                <h4 className="font-extrabold text-[#191919] text-lg mb-2">분쇄건조식</h4>
-               <p className="text-[15px] font-medium text-[#4B4B4B] tracking-tight leading-relaxed">스마트카라, 쿠쿠(에코웨일), 미닉스(더 플렌더), 아이닉, 에코체, 쉘퍼, 퓨리얼</p>
+               <p className="text-[15px] font-medium text-[#4B4B4B] tracking-tight leading-relaxed">경쟁사 S, 경쟁사 C, 경쟁사 M, 경쟁사 I, 경쟁사 E, 경쟁사 SH, 경쟁사 P</p>
              </div>
              <div className="bg-white p-5 rounded-xl border border-[#E1E1E1]/50 shadow-sm">
                <div className="text-[#3C76F1] font-bold text-sm tracking-widest mb-2 font-mono">TYPE 2</div>
                <h4 className="font-extrabold text-[#191919] text-lg mb-2">미생물식</h4>
-               <p className="text-[15px] font-medium text-[#4B4B4B] tracking-tight leading-relaxed">린클</p>
+               <p className="text-[15px] font-medium text-[#4B4B4B] tracking-tight leading-relaxed">경쟁사 L</p>
              </div>
              <div className="bg-white p-5 rounded-xl border border-[#E1E1E1]/50 shadow-sm">
                <div className="text-[#3C76F1] font-bold text-sm tracking-widest mb-2 font-mono">TYPE 3</div>
                <h4 className="font-extrabold text-[#191919] text-lg mb-2">건조식</h4>
-               <p className="text-[15px] font-medium text-[#4B4B4B] tracking-tight leading-relaxed">루펜</p>
+               <p className="text-[15px] font-medium text-[#4B4B4B] tracking-tight leading-relaxed">경쟁사 R</p>
              </div>
            </div>
            
            <div className="mt-2 bg-white/60 p-5 rounded-xl border-l-[6px] border-[#3C76F1]">
              <p className="text-[16px] font-bold text-[#191919] tracking-tight leading-relaxed">
-               블루벤트를 <span className="text-[#3C76F1]">‘존재하지 않는 브랜드’</span>처럼 취급. 이는 공식 사이트 내 AI 참조용 비교 정보(스펙 테이블, 경쟁 비교 콘텐츠 등) 부재가 주원인으로 분석됨.
+               A사를 <span className="text-[#3C76F1]">‘존재하지 않는 브랜드’</span>처럼 취급. 이는 공식 사이트 내 AI 참조용 비교 정보(스펙 테이블, 경쟁 비교 콘텐츠 등) 부재가 주원인으로 분석됨.
              </p>
            </div>
          </div>
@@ -210,15 +201,15 @@ export const CompetitorStatusLayout = ({ slide }: { slide: Slide }) => {
           <div className="space-y-4">
             <div className="bg-white border border-[#E1E1E1] rounded-xl p-5 shadow-sm">
               <h4 className="font-extrabold text-[#3C76F1] text-[16px] mb-1">1) Schema.org 구조화 데이터: 전 브랜드 미적용</h4>
-              <p className="text-[14px] font-medium text-[#4B4B4B] leading-relaxed">조사 대상 6개 브랜드 모두 Schema.org JSON-LD 미적용 상태. 블루벤트의 선제적 도입 시 차별화된 구조화 정보 우위 확보 가능.</p>
+              <p className="text-[14px] font-medium text-[#4B4B4B] leading-relaxed">조사 대상 6개 브랜드 모두 Schema.org JSON-LD 미적용 상태. A사의 선제적 도입 시 차별화된 구조화 정보 우위 확보 가능.</p>
             </div>
             <div className="bg-white border border-[#E1E1E1] rounded-xl p-5 shadow-sm">
-              <h4 className="font-extrabold text-[#191919] text-[16px] mb-1">2) Sitemap.xml: 블루벤트·쿠쿠만 미존재</h4>
-              <p className="text-[14px] font-medium text-[#4B4B4B] leading-relaxed">스마트카라·미닉스·린클·루메나는 모두 검색 엔진용 페이지 발견 효율을 확보 중.</p>
+              <h4 className="font-extrabold text-[#191919] text-[16px] mb-1">2) Sitemap.xml: A사·경쟁사 C만 미존재</h4>
+              <p className="text-[14px] font-medium text-[#4B4B4B] leading-relaxed">경쟁사 S·경쟁사 M·경쟁사 L·경쟁사 RM은 모두 검색 엔진용 페이지 발견 효율을 확보 중.</p>
             </div>
             <div className="bg-white border border-[#E1E1E1] rounded-xl p-5 shadow-sm overflow-hidden relative">
-              <h4 className="font-extrabold text-[#D64040] text-[16px] mb-1">3) 메타태그 완성도: 블루벤트 하위권</h4>
-              <p className="text-[14px] font-medium text-[#4B4B4B] leading-relaxed">스마트카라·루메나는 Title/Desc/OG/Canonical 완비. 블루벤트는 Desc 빈 값 및 단순 OG 설정 상태.</p>
+              <h4 className="font-extrabold text-[#D64040] text-[16px] mb-1">3) 메타태그 완성도: A사 하위권</h4>
+              <p className="text-[14px] font-medium text-[#4B4B4B] leading-relaxed">경쟁사 S·경쟁사 RM은 Title/Desc/OG/Canonical 완비. A사는 Desc 빈 값 및 단순 OG 설정 상태.</p>
             </div>
           </div>
         </div>
@@ -238,15 +229,15 @@ export const CompetitorStatusLayout = ({ slide }: { slide: Slide }) => {
             </div>
             <div className="divide-y divide-[#E1E1E1] text-[14px] font-medium text-center">
               {[
-                { name: '스마트카라', schema: '미적용', meta: '✅ 완전', sitemap: '✅ 존재', h1: 'H2 기반' },
-                { name: '미닉스', schema: '미적용', meta: '⚠️ 불완전', sitemap: '✅ 존재', h1: '✅ H1 "미닉스"' },
-                { name: '린클', schema: '미적용', meta: '⚠️ 불완전', sitemap: '✅ 존재', h1: 'H2 기반' },
-                { name: '루메나', schema: '미적용', meta: '✅ 완전', sitemap: '✅ 존재', h1: 'H1 없음' },
-                { name: '쿠쿠', schema: '미적용', meta: '⚠️ 불완전', sitemap: '❌ 없음', h1: '⚠️ H1 다수' },
-                { name: '블루벤트', schema: '미적용', meta: '❌ 불완전', sitemap: '❌ 없음', h1: '❌ H1' }
+                { name: '경쟁사 S', schema: '미적용', meta: '✅ 완전', sitemap: '✅ 존재', h1: 'H2 기반' },
+                { name: '경쟁사 M', schema: '미적용', meta: '⚠️ 불완전', sitemap: '✅ 존재', h1: '✅ H1 "M사"' },
+                { name: '경쟁사 L', schema: '미적용', meta: '⚠️ 불완전', sitemap: '✅ 존재', h1: 'H2 기반' },
+                { name: '경쟁사 RM', schema: '미적용', meta: '✅ 완전', sitemap: '✅ 존재', h1: 'H1 없음' },
+                { name: '경쟁사 C', schema: '미적용', meta: '⚠️ 불완전', sitemap: '❌ 없음', h1: '⚠️ H1 다수' },
+                { name: 'A사', schema: '미적용', meta: '❌ 불완전', sitemap: '❌ 없음', h1: '❌ H1' }
               ].map((brand, bIdx) => (
-                <div key={bIdx} className={`grid grid-cols-[1fr_1fr_1.5fr_1fr_1.2fr] hover:bg-[#F5F8FA]/50 transition-colors ${brand.name === '블루벤트' ? 'bg-[#FAEBEB]/30 border-t-2 border-[#D64040]' : 'bg-white'}`}>
-                  <div className={`px-4 py-3 flex items-center justify-center font-extrabold border-r border-[#E1E1E1] ${brand.name === '블루벤트' ? 'text-[#D64040]' : 'text-[#191919]'}`}>{brand.name}</div>
+                <div key={bIdx} className={`grid grid-cols-[1fr_1fr_1.5fr_1fr_1.2fr] hover:bg-[#F5F8FA]/50 transition-colors ${brand.name === 'A사' ? 'bg-[#FAEBEB]/30 border-t-2 border-[#D64040]' : 'bg-white'}`}>
+                  <div className={`px-4 py-3 flex items-center justify-center font-extrabold border-r border-[#E1E1E1] ${brand.name === 'A사' ? 'text-[#D64040]' : 'text-[#191919]'}`}>{brand.name}</div>
                   <div className="px-4 py-3 flex items-center justify-center text-[#969696] border-r border-[#E1E1E1]">{brand.schema}</div>
                   <div className={`px-4 py-3 flex text-left items-center font-bold border-r border-[#E1E1E1] ${brand.meta.includes('✅') ? 'text-[#00A15D]' : brand.meta.includes('⚠️') ? 'text-[#FF8A00]' : 'text-[#D64040]'}`}>{brand.meta}</div>
                   <div className={`px-4 py-3 flex items-center justify-center font-bold border-r border-[#E1E1E1] ${brand.sitemap.includes('✅') ? 'text-[#00A15D]' : 'text-[#D64040]'}`}>{brand.sitemap}</div>
@@ -256,8 +247,8 @@ export const CompetitorStatusLayout = ({ slide }: { slide: Slide }) => {
             </div>
             <div className="bg-[#191919] p-4 text-white text-[14px]">
               <p className="font-semibold leading-relaxed tracking-tight">
-                <span className="text-[#3C76F1]">시사점:</span> 경쟁사 전반에 Schema.org가 미도입된 상태로, 블루벤트의 JSON-LD 선제 적용은 업계 최초 AI 구조화 정보 제공 우위 확보를 의미함.<br/>
-                <span className="text-[#FF8A00] mt-1 inline-block">현재 블루벤트 자사몰의 AI 크롤러 차단(robots.txt)은 치명적 약점이며, 해당 제약사항 해소가 PoC 최우선 선행 조건임.</span>
+                <span className="text-[#3C76F1]">시사점:</span> 경쟁사 전반에 Schema.org가 미도입된 상태로, A사의 JSON-LD 선제 적용은 업계 최초 AI 구조화 정보 제공 우위 확보를 의미함.<br/>
+                <span className="text-[#FF8A00] mt-1 inline-block">현재 A사 자사몰의 AI 크롤러 차단(robots.txt)은 치명적 약점이며, 해당 제약사항 해소가 PoC 최우선 선행 조건임.</span>
               </p>
             </div>
           </div>
@@ -341,23 +332,6 @@ export const ChecklistLayout = ({ slide }: { slide: Slide, index: number }) => {
               <div className="flex flex-col gap-2 w-full">
                 <h3 className="text-base font-bold text-[#191919] tracking-[-0.02em]" dangerouslySetInnerHTML={{ __html: item.title }} />
                 <p className="text-sm text-[#969696] font-medium leading-relaxed" dangerouslySetInnerHTML={{ __html: item.desc }} />
-                
-                {idx === 2 && (
-                  <div className="flex flex-wrap gap-5 mt-10">
-                    {[1, 2, 3, 4, 5].map((num) => (
-                      <div 
-                        key={num} 
-                        className="w-48 aspect-video rounded-xl overflow-hidden border border-[#E1E1E1] shadow-md hover:shadow-xl hover:scale-[1.05] hover:border-[#3C76F1] transition-all cursor-zoom-in bg-white group/thumb"
-                        onClick={() => setCurrentImageIdx(num)}
-                      >
-                        <img src={`/images/error${num}.png`} alt={`Fact error ${num}`} className="w-full h-full object-cover transition-all duration-700 group-hover/thumb:scale-110" />
-                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 opacity-0 group-hover/thumb:opacity-100 transition-opacity">
-                          <span className="text-white text-[10px] font-bold tracking-widest">{getErrorLabel(num)}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
               </div>
             </div>
           </motion.div>

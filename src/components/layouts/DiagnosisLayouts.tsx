@@ -74,7 +74,7 @@ export const DiagnosticCombinedLayout = ({ slide }: { slide: Slide }) => {
          </div>
          <div className="flex flex-col gap-6 ml-[1.6rem]">
            <p className="text-[17px] text-[#4B4B4B] font-medium leading-relaxed tracking-tight">
-             ClaudeBot·GPTBot이 bluevent.co.kr 어떤 페이지에도 접근 불가.<br/>
+             ClaudeBot·GPTBot이 *****.co.kr 어떤 페이지에도 접근 불가.<br/>
              이 차단이 해제되지 않으면, 페이지 최적화 효과를 Claude·ChatGPT에서 측정할 수 없음.
            </p>
            <div className="h-[1px] w-full bg-[#D64040]/10" />
@@ -193,7 +193,7 @@ export const HypothesesLayout = ({ slide }: { slide: Slide }) => {
                     ))}
                   </div>
                 </div>
-                <div className="bg-[#EAF6ED] border border-[#CDE1D1] border-l-[6px] border-l-[#32A852] p-6 rounded-lg"><h4 className="font-bold text-[#32A852] text-[18px] mb-3">Q2·Q3에서 블루벤트가 노출되지 않는 핵심 원인:</h4><p className="text-[#4B4B4B] text-[15px] leading-relaxed">4단계(경쟁 비교)와 2단계(스펙 테이블)가 완전 부재. 경쟁사(스마트카라 등)는 이 두 단계가 텍스트로 구조화되어 있어 AI가 비교·추천 답변에 포함시킬 수 있음. 블루벤트도 동일 구조를 적용하면 노출 가능성이 높아진다.</p></div>
+                <div className="bg-[#EAF6ED] border border-[#CDE1D1] border-l-[6px] border-l-[#32A852] p-6 rounded-lg"><h4 className="font-bold text-[#32A852] text-[18px] mb-3">Q2·Q3에서 A사가 노출되지 않는 핵심 원인:</h4><p className="text-[#4B4B4B] text-[15px] leading-relaxed">4단계(경쟁 비교)와 2단계(스펙 테이블)가 완전 부재. 경쟁사(경쟁사 S 등)는 이 두 단계가 텍스트로 구조화되어 있어 AI가 비교·추천 답변에 포함시킬 수 있음. A사도 동일 구조를 적용하면 노출 가능성이 높아진다.</p></div>
               </div>
             </div>
           </motion.div>

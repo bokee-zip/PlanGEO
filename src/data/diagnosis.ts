@@ -21,7 +21,7 @@ export const DIAGNOSIS_SLIDES: Slide[] = [
     oneLiner: "브랜드 인식의 핵심인 <strong>메인 페이지 테크니컬 요소</strong> 심층 분석",
     bullets: [
       "SCORE:Meta Description|<strong>Fail</strong>|미설정 — AI 요약 시 정보 부재",
-      "SCORE:og 태그|<strong>Warning</strong>|'한 손 시대의 개막, 블루벤트'로 단순함",
+      "SCORE:og 태그|<strong>Warning</strong>|'한 손 시대의 개막, A사'로 단순함",
       "SCORE:H1 태그|<strong>Fail</strong>|'CUSTOMER CENTER'에 사용 — 브랜드·제품 키워드 미포함",
       "SCORE:JSON-LD|<strong>Fail</strong>|Organization, Product, FAQ 등 구조화 데이터 0건",
       "SCORE:본문 텍스트 비율|<strong>Fail</strong>|이미지 96개 중심, 텍스트 콘텐츠 극히 부족",
@@ -33,7 +33,7 @@ export const DIAGNOSIS_SLIDES: Slide[] = [
   },
   {
     id: 10,
-    title: "2-3. 제품 상세페이지(블루벤트 ID) 진단 결과",
+    title: "2-3. 제품 상세페이지(A사 제품) 진단 결과",
     oneLiner: "제품 정보 정확도를 결정하는 <strong>데이터 추출 효율성</strong> 정밀 진단",
     bullets: [
       "SCORE:제품 정보 구성|<strong>Fail</strong>|전체 스펙·기능이 이미지 통짜 → 텍스트 크롤링 완전 불가",

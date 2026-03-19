@@ -13,7 +13,7 @@ export const PLAN_SLIDES: Slide[] = [
     title: "3-0. 고도몰 플랫폼 특성을 고려한 개선 전략",
     oneLiner: "",
     bullets: [
-      "ACTION:<span class='text-[#FF4040]'>robots.txt AI봇 허용</span>|FTP 직접 수정 또는 NHN커머스 고객센터 요청|블루벤트 개발팀|업데이트 시 덮어쓰기 가능 &rarr; 주 1회 모니터링",
+      "ACTION:<span class='text-[#FF4040]'>robots.txt AI봇 허용</span>|FTP 직접 수정 또는 NHN커머스 고객센터 요청|A사 개발팀|업데이트 시 덮어쓰기 가능 &rarr; 주 1회 모니터링",
       "ACTION:Sitemap.xml 확인/생성|고도몰 관리자 확인 &rarr; 미존재 시 수동 생성 + Search Console 제출|이트라이브|페이지 수 변동 시 갱신 필요",
       "ALERT:⚠ 위 2가지 미완료 시 &rarr; 아래 3-1/3-2 최적화 효과를 정상 측정할 수 없음",
       "CONSTR:SSR 한계 &rarr; 서버 사이드 렌더링 제어 불가|HTML 내 직접 텍스트/데이터 삽입 방식으로 구현",
@@ -21,42 +21,6 @@ export const PLAN_SLIDES: Slide[] = [
       "CONSTR:치환코드 활용 범위 한정|자유 입력 가능 영역(상품 설명, 추가 HTML)을 최대한 활용"
     ],
     visualGuide: "플랫폼 제약사항과 필수 조치를 테이블로 대비한 형태"
-  },
-  {
-    id: 14,
-    title: "3-1. 메인 홈페이지 — As-Is & To-Be",
-    oneLiner: "브랜드 실체 강화를 위한 <strong>인프라 정상화 및 시맨틱 보정</strong> 비교",
-    bullets: [
-      "COMPARE:① 크롤링 인프라|GPTBot·ClaudeBot 차단<br/>sitemap 미확인<br/>canonical 미정규화|AI봇 허용 전환<br/>sitemap 확인/제출<br/>canonical 정규화<br/>(선택) llms.txt 검토",
-      "COMPARE:② 메타 태그|타이틀 복수 혼재<br/>Meta Desc·OG 미정규화|타이틀 1개 확정 ● 컨펌<br/>Meta Desc·OG·Canonical 일괄 정규화",
-      "COMPARE:③ 본문 텍스트|텍스트 비율 극히 낮음<br/>헤딩 미사용<br/>영상·이미지만 의존|H1 브랜드+키워드 삽입 ● 컨펌<br/>TL;DR 정의문·스펙 요약 텍스트<br/>영상 요약 블록·앵커 텍스트 설계",
-      "COMPARE:④ JSON-LD|미적용|Organization / WebSite / BreadcrumbList",
-      "COMPARE:⑤ FAQ|없음|핵심 5개 FAQ 텍스트 + FAQPage Schema",
-      "PRIORITY:우선순위: ① 인프라(선결) → ② 메타 태그 확정 → ③ 본문 텍스트 → ④ JSON-LD → ⑤ FAQ"
-    ],
-    visualGuide: "메인 페이지의 시각적/기술적 변화를 비교한 전/후 레이아웃 도식."
-  },
-  {
-    id: 15,
-    title: "3-1. 메인 홈페이지 — 비주얼 프리뷰",
-    oneLiner: "UI/UX 및 테크니컬 구조 개편에 따른 <strong>시각적 변화 미리보기</strong>",
-    bullets: [
-      "ASIS:/images/main_asis1.png",
-      "TOBE:/images/main_tobe2.png"
-    ],
-    visualGuide: "As-Is와 To-Be 이미지를 좌우로 배치하여 직관적인 변화를 보여주는 레이아웃."
-  },
-  {
-    id: 16,
-    title: "3-1. 메인 홈페이지 — As-Is & To-Be",
-    oneLiner: "성공적인 PoC 수행을 위한 <strong>개선 시 의사결정 필요 사항</strong>",
-    bullets: [
-      "OPTION:A. 타이틀 태그 후보|웹사이트의 각 페이지에 붙이는 '이름표'|블루벤트 &#124; 음식물 처리의 한 손 시대 개막|블루벤트 &#124; 가정용 음식물처리기 공식 온라인몰|블루벤트 &#124; 원핸드그립 음식물처리기, 블루벤트 ID|블루벤트 &#124; 한 손으로 끝내는 음식물처리기 공식 온라인몰",
-      "OPTION:B. H1 Tag 후보|페이지의 핵심 주제를 정의하는 대제목|한 손으로 끝내는 음식물처리기, 블루벤트 (브랜드)|한 손으로 넣고 AI로 처리하는 음식물처리기 (AI 강조)|블루벤트, AI 음식물처리기의 새로운 기준",
-      "OPTION:C. 스펙 요약 영역|핵심 제품 정보를 요약한 텍스트 블록|대표 제품(블루벤트 ID) 단일 모델 중심 구성|무무 / S 포함 전 라인업 통합 요약 구성",
-      "OPTION:D. FAQ 5개 선정|사용자 의도를 반영한 텍스트 블록|필터는 얼마나 자주 교체해야 하나요?|닭뼈나 생선뼈도 갈리나요?|작동 시 소음은 어느 정도인가요?|처리 중 음식물을 투입해도 되나요?|처리 완료까지 시간은 얼마나 걸리나요?"
-    ],
-    visualGuide: "의사결정이 필요한 항목들을 대조표 및 선택형 카드 형태로 시각화."
   },
   {
     id: 17,
@@ -69,7 +33,7 @@ export const PLAN_SLIDES: Slide[] = [
       "ASIDE_BULLET:순서 재배치는 검증보다 <strong>UX/CRO 성격이 강해</strong> 이번 PoC 기술 검증 항목과는 분리합니다.",
       "ASIDE_BULLET:PoC 우선순위는 <strong>① 이미지 Alt 텍스트 전면 적용 → ② 섹션별 헤딩 구조 정비 및 데이터 구조화</strong> 순입니다.",
       "COMPARE:① 메타 태그|(점검 필요)|Meta Title·Desc·OG·Canonical 정규화",
-      "COMPARE:② Alt 텍스트|없음 / '.' 등 비규격|\"블루벤트 ID [기능명] — [설명]\" 규격",
+      "COMPARE:② Alt 텍스트|없음 / '.' 등 비규격|\"A사 제품 [기능명] — [설명]\" 규격",
       "COMPARE:② 시맨틱 텍스트|없음|이미지 아래 H2/H3/p 텍스트 블록 삽입<br/>(시각적 노출 또는 sr-only, 클로킹 금지 준수)"
     ],
     visualGuide: "상세 페이지의 테크니컬 개선 핵심 포인트(Aside)와 4대 실행 항목(Grid)을 결합한 정보 중심 레이아웃."
